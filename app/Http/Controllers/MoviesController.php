@@ -36,7 +36,15 @@ class MoviesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'genre' => 'required',
+            'director' => 'required',
+            'year' => 'required|numeric|between:1900,'.date('Y'),
+            'storyline' => 'required|max:1000',
+        ]);
+        Movie::create($request->all());
+        return redirect(route('movies.index'));
     }
 
     /**

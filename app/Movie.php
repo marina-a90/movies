@@ -11,6 +11,6 @@ class Movie extends Model
         'genre',
         'director',
         'year',
-        'storyline',
+        'storyline'
     ];
 }
