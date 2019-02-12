@@ -40,7 +40,7 @@
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link" href="#">Add movie</a>
+                            <a class="nav-link" href="{{ route('movies.create') }}">Add movie</a>
                         </li>
                       </ul>
                     </div>
