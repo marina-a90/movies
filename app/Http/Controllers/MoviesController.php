@@ -91,4 +91,13 @@ class MoviesController extends Controller
     {
         //
     }
+
+    public function addComment(Request $request, $id) 
+    {
+        Comment::create([
+        'movie_id' => $id,
+        'content' => $request->content
+        ]);
+        return redirect()->back();
+    }
 }

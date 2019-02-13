@@ -16,3 +16,5 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('movies', 'MoviesController');
+
+Route::post('movies/{id}/comments', 'MoviesController@addComment')->name('movies.comments');

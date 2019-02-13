@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->integer('movie_id')->unsigned();
             $table->foreign('movie_id')
                     ->reference('id')
-                    ->on('posts')
+                    ->on('movies')
                     ->onDelete('cascade');
             $table->text('content');
             $table->timestamps();
